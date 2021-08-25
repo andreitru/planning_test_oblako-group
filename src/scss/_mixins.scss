@@ -1,0 +1,13 @@
+@mixin ng-select-mixin {
+  ::ng-deep .ng-clear {
+    display: none !important;
+    height: 0;
+    width: 0;
+  }
+}
+
+@mixin body-mixin {
+  body {
+    background-color: red;
+  }
+}

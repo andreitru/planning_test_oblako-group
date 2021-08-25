@@ -1,0 +1,65 @@
+.group-form {
+  padding-bottom: 35px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  &__label-input {
+    max-width: 166px;
+    width: 100%;
+    padding-left: 24px;
+    border-bottom: 1px solid var(--primary-lines-gray);
+    background: url("../../../assets/icons/search.svg") no-repeat left center;
+  }
+
+  &__input {
+    padding: 7px 10px 6px 11px;
+    width: 100%;
+    outline: none;
+    border: none;
+
+    &::placeholder {
+      font-weight: 500;
+      font-size: 12px;
+      color: var(--light-theme);
+    }
+  }
+
+  &__label {
+    max-width: 166px;
+  }
+
+  &__bottom {
+    padding-top: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__sessions-count {
+    margin-right: 88px;
+  }
+
+  &__customize-filter {
+    margin-right: 30px;
+  }
+}
+
+::ng-deep .ng-clear {
+  display: none !important;
+  height: 0;
+  width: 0;
+}
+
+::ng-deep .ng-arrow-wrapper {
+  width: 18px;
+  height: 12px;
+  background: url("../../../assets/icons/arrow.svg") no-repeat center;
+}
+
+::ng-deep .ng-select-opened .ng-arrow-wrapper {
+  transform: rotate(180deg);
+}

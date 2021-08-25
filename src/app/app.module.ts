@@ -1,14 +1,45 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
+import {HeaderComponent} from './header/header.component';
+import {ToScheduleComponent} from './header/to-schedule/to-schedule.component';
+import {BurgerComponent} from "./header/burger/burger.component";
+import {BreadCrumbsComponent} from './bread-crumbs/bread-crumbs.component';
+import {TabsComponent} from "./tabs/tabs.component";
+import {TabComponent} from "./tabs/tab/tab.component";
+import {GroupPlanningComponent} from './group-planning/group-planning.component';
+import {FormsModule} from "@angular/forms";
+import {FormComponent} from './group-planning/form/form.component';
+import {NgSelectModule} from "@ng-select/ng-select";
+import { CounterComponent } from './counter/counter.component';
+import { CustomizeFilterComponent } from './customize-filter/customize-filter.component';
+import { ResetComponent } from './reset/reset.component';
+import { SessionsListComponent } from './sessions-list/sessions-list.component';
+import { ModalComponent } from './modal/modal.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    BurgerComponent,
+    ToScheduleComponent,
+    BreadCrumbsComponent,
+    TabsComponent,
+    TabComponent,
+    GroupPlanningComponent,
+    FormComponent,
+    CounterComponent,
+    CustomizeFilterComponent,
+    ResetComponent,
+    SessionsListComponent,
+    ModalComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
