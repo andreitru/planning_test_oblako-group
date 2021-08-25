@@ -1,0 +1,47 @@
+.modal {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid var(--primary-lines-gray);
+  left: 33%;
+  width: 67%;
+
+  &__container {
+    position: relative;
+    height: 100%;
+    background-color: var(--primary-white);
+    padding: 43px 14px 24px 24px;
+  }
+
+  &__background {
+    z-index: 900;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--primary-white);
+    opacity: 0.95;
+  }
+
+  &__title {
+    margin: 0 0 23px;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--primary-black);
+  }
+
+  &__btn {
+    position: absolute;
+    top: 42px;
+
+    &--ok {
+      right: 52px;
+    }
+
+    &--x {
+      right: 14px;
+    }
+  }
+}

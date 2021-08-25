@@ -17,6 +17,9 @@ import { CustomizeFilterComponent } from './customize-filter/customize-filter.co
 import { ResetComponent } from './reset/reset.component';
 import { SessionsListComponent } from './sessions-list/sessions-list.component';
 import { ModalComponent } from './modal/modal.component';
+import { ProgramComponent } from './modal/program/program.component';
+import { EventComponent } from './modal/event/event.component';
+import { EventNameComponent } from './modal/event/event-name/event-name.component';
 
 
 @NgModule({
@@ -35,6 +38,9 @@ import { ModalComponent } from './modal/modal.component';
     ResetComponent,
     SessionsListComponent,
     ModalComponent,
+    ProgramComponent,
+    EventComponent,
+    EventNameComponent,
   ],
   imports: [
     BrowserModule,

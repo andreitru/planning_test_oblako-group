@@ -1,4 +1,19 @@
-<app-header></app-header>
+<app-header>
+  <app-burger></app-burger>
+  <app-to-schedule>
+    <app-modal id="modal" class="show"> <!-- hidden -->
+      <app-tabs>
+        <app-tab tabTitle="Основное">
+          <app-program></app-program>
+          <app-event></app-event>
+        </app-tab>
+        <app-tab tabTitle="Участники">
+
+        </app-tab>
+      </app-tabs>
+    </app-modal>
+  </app-to-schedule>
+</app-header>
 <main class="main">
   <div class="container">
     <app-bread-crumbs></app-bread-crumbs>
