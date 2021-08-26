@@ -3,6 +3,39 @@ ng-select {
   margin-bottom: 7px;
 }
 
+.ng-select .ng-select-container {
+  border: none;
+}
+
+.ng-select .ng-select-container:hover {
+  box-shadow: none;
+}
+
+.ng-select .ng-select-container .ng-value-container {
+  padding: 0;
+}
+
+.ng-select.ng-select-single .ng-select-container {
+  height: auto;
+}
+
+.ng-select .ng-select-container {
+  min-height: auto;
+}
+
+.ng-select .ng-arrow-wrapper .ng-arrow {
+  border: none;
+}
+
+.ng-select .ng-arrow-wrapper {
+  padding-right: 0;
+  width: 20px;
+}
+
+.ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input {
+  top: 0;
+}
+
 .ng-value-label {
   font-weight: 500;
   font-size: 12px;

@@ -20,6 +20,10 @@ import { ModalComponent } from './modal/modal.component';
 import { ProgramComponent } from './modal/program/program.component';
 import { EventComponent } from './modal/event/event.component';
 import { EventNameComponent } from './modal/event/event-name/event-name.component';
+import {DpDatePickerModule} from "ng2-date-picker";
+import { EventFormComponent } from './modal/event/event-form/event-form.component';
+import { ConditionsComponent } from './modal/conditions/conditions.component';
+import { CheckboxComponent } from './modal/conditions/checkbox/checkbox.component';
 
 
 @NgModule({
@@ -41,11 +45,15 @@ import { EventNameComponent } from './modal/event/event-name/event-name.componen
     ProgramComponent,
     EventComponent,
     EventNameComponent,
+    EventFormComponent,
+    ConditionsComponent,
+    CheckboxComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    NgSelectModule
+    NgSelectModule,
+    DpDatePickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

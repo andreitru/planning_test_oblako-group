@@ -1,0 +1,91 @@
+.event-form {
+  padding-left: 51px;
+  padding-top: 33px;
+  padding-bottom: 34px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  &__label {
+    padding-left: 30px;
+    max-width: 246px;
+    width: 100%;
+    border-bottom: 1px solid var(--primary-lines-gray);
+    background-position: left 17px;
+    background-repeat: no-repeat;
+
+    &--date {
+      background-image: url("../../../../assets/icons/calendar.svg");
+
+      &--selected {
+        background-image: url("../../../../assets/icons/calendar-selected.svg");
+      }
+    }
+
+    &--time {
+      background-image: url("../../../../assets/icons/time.svg");
+
+      &--selected {
+        background-image: url("../../../../assets/icons/time-selected.svg");
+      }
+    }
+
+    &--trainer {
+      background-image: url("../../../../assets/icons/trainer.svg");
+
+      &--selected {
+        background-image: none;
+      }
+    }
+  }
+
+  &__text {
+    opacity: 0;
+    font-weight: 500;
+    font-size: 10px;
+    color: var(--light-theme-secondary);
+    display: flex;
+    flex-direction: column;
+
+    &--visible {
+      opacity: 1;
+    }
+  }
+}
+
+::ng-deep .ng-select .ng-select-container .ng-value-container .ng-placeholder {
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--light-theme-secondary);
+}
+
+::ng-deep dp-date-picker.dp-material .dp-picker-input {
+  font-weight: 500;
+  font-size: 12px !important;
+  color: var(--primary-black);
+  height: 26px;
+}
+
+::ng-deep dp-day-calendar.dp-material .dp-current-day {
+  background: rgba(0, 0, 0, 0.16) !important;
+  border-color: transparent !important;
+}
+
+::ng-deep dp-day-calendar.dp-material .dp-selected {
+  background: var(--primary-blue) !important;
+  border-color: transparent !important;
+  color: var(--primary-white) !important;
+}
+
+::ng-deep dp-calendar-nav .dp-nav-header {
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+::ng-deep dp-calendar-nav .dp-nav-btns-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  left: 10px !important;
+  right: 10px !important;
+}
