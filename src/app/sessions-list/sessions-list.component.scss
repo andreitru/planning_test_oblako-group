@@ -1,13 +1,16 @@
+@import "src/scss/mixins";
+
 .sessions-list {
   margin: 0 0 0 -8px;
   width: 100%;
-  padding-top: 26px;
+  padding-top: 23px;
 }
 
 .sessions-item {
   padding: 6px 8px;
   width: 100%;
   display: flex;
+  min-height: 32px;
   align-items: center;
   justify-content: flex-start;
   font-weight: 500;
@@ -42,11 +45,19 @@
   &__participants {
     margin-right: 2.9%;
     min-width: 104px;
+
+    @include sm {
+      min-width: 60px;
+    }
   }
 
   &__trainer {
     margin-right: 2.8%;
     min-width: 100px;
+
+    @include sm {
+      display: none;
+    }
   }
 
   &__progress {
@@ -59,12 +70,21 @@
     svg {
       margin-right: 10px;
     }
+
+    @include sm {
+      min-width: 60px;
+      margin-right: 0;
+    }
   }
 
   &__menu {
     min-width: 32px;
     display: flex;
     align-items: center;
+
+    @include sm {
+      display: none;
+    }
   }
 
   &__btn {
@@ -89,4 +109,8 @@
       color: var(--light-theme-secondary);
     }
   }
+
+  //@include sm {
+  //  height: auto;
+  //}
 }

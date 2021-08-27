@@ -1,3 +1,5 @@
+@import "src/scss/mixins";
+
 .available-members {
   padding-top: 20px;
 
@@ -15,6 +17,10 @@
 
   &__label {
     width: 45%;
+
+    @include xs {
+      width: 100%;
+    }
   }
 
   &__input {
@@ -36,11 +42,26 @@
   }
 
   &__count {
+    white-space: nowrap;
     margin-right: 46px;
+
+    @include mobile {
+      margin-right: 5%;
+    }
   }
 
   &__customize-filter {
     margin-right: 29px;
+
+    span {
+      @include sm {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      margin-right: 5%;
+    }
   }
 
   &__checkboxes {

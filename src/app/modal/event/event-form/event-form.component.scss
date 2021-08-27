@@ -1,3 +1,5 @@
+@import "src/scss/mixins";
+
 .event-form {
   padding-left: 51px;
   padding-top: 33px;
@@ -8,8 +10,8 @@
 
   &__label {
     padding-left: 30px;
-    max-width: 246px;
-    width: 100%;
+    //max-width: 246px;
+    width: 32%;
     border-bottom: 1px solid var(--primary-lines-gray);
     background-position: left 17px;
     background-repeat: no-repeat;
@@ -37,6 +39,14 @@
         background-image: none;
       }
     }
+
+    @include mobile {
+      width: 45%;
+    }
+
+    @include xs {
+      width: 100%;
+    }
   }
 
   &__text {
@@ -51,6 +61,13 @@
       opacity: 1;
     }
   }
+
+  @include mobile {
+    display: flex;
+    //flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
 }
 
 ::ng-deep .ng-select .ng-select-container .ng-value-container .ng-placeholder {
@@ -60,6 +77,7 @@
 }
 
 ::ng-deep dp-date-picker.dp-material .dp-picker-input {
+  width: auto !important;
   font-weight: 500;
   font-size: 12px !important;
   color: var(--primary-black);

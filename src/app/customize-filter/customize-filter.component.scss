@@ -1,3 +1,5 @@
+@import "src/scss/mixins";
+
 .customize-filter {
   display: flex;
   align-items: center;
@@ -7,5 +9,14 @@
 
   svg {
     margin-right: 10px;
+    fill: currentColor;
+
+    @include sm {
+      margin-right: 0;
+    }
+  }
+
+  @include sm {
+    color: var(--light-theme-secondary);
   }
 }

@@ -1,6 +1,4 @@
-.main {
-
-}
+@import "src/scss/mixins";
 
 .title {
   margin: 20px 0 28px 2px;
@@ -10,4 +8,8 @@
   color: var(--primary-black);
   background: url("../assets/img/logo.svg") no-repeat left center;
   background-size: 27px 29px;
+
+  @include sm {
+    display: none;
+  }
 }

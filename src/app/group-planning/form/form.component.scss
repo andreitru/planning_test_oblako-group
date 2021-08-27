@@ -1,3 +1,5 @@
+@import "src/scss/mixins";
+
 .group-form {
   padding-bottom: 35px;
   display: flex;
@@ -12,6 +14,11 @@
     padding-left: 24px;
     border-bottom: 1px solid var(--primary-lines-gray);
     background: url("../../../assets/icons/search.svg") no-repeat left center;
+
+    @include sm {
+      max-width: 100%;
+      display: flex;
+    }
   }
 
   &__input {
@@ -29,6 +36,19 @@
 
   &__label {
     max-width: 166px;
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__label-sort {
+    display: none;
+
+    @include sm {
+      display: block;
+      max-width: 100%;
+    }
   }
 
   &__bottom {
@@ -37,6 +57,10 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
+    @include sm {
+      display: none;
+    }
   }
 
   &__sessions-count {
@@ -45,6 +69,14 @@
 
   &__customize-filter {
     margin-right: 30px;
+
+    &--mobile {
+      display: none;
+
+      @include sm {
+        display: block;
+      }
+    }
   }
 }
 

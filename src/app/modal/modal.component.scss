@@ -1,3 +1,5 @@
+@import "src/scss/mixins";
+
 .modal {
   z-index: 1000;
   position: fixed;
@@ -6,9 +8,10 @@
   border-left: 1px solid var(--primary-lines-gray);
   left: 33%;
   right: calc((100vw - 1280px) / 2);
-// todo mixin 1280 right 0
+
   &__container {
     position: relative;
+    overflow-y: auto;
     height: 100%;
     background-color: var(--primary-white);
     padding: 43px 14px 24px 24px;
@@ -44,4 +47,16 @@
       right: 14px;
     }
   }
+
+  @include md {
+    right: 0;
+  }
+
+  @include mobile-md {
+    left: 8%;
+  }
+
+  //@include mobile {
+  //  left: 0;
+  //}
 }

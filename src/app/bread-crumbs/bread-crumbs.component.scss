@@ -1,3 +1,5 @@
+@import "src/scss/mixins";
+
 .breadcrumbs {
   font-weight: 500;
   font-size: 12px;
@@ -9,5 +11,9 @@
     &:not(:first-child) {
       margin-left: 7px;
     }
+  }
+
+  @include sm {
+    display: none;
   }
 }

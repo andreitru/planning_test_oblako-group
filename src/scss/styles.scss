@@ -2,6 +2,7 @@
 @import "fonts";
 @import "variables";
 @import "ng-select";
+@import "mixins";
 @import "~@ng-select/ng-select/themes/default.theme.css";
 
 html {
@@ -52,6 +53,11 @@ input {
   max-width: 1280px;
   padding-left: 67px;
   padding-right: 67px;
+
+  @include mobile {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .btn-reset {
@@ -106,4 +112,8 @@ input {
 
 .w50 {
   width: 50%;
+
+  @include sm {
+    width: 100%;
+  }
 }

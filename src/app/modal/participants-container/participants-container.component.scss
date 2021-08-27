@@ -1,8 +1,14 @@
+@import "src/scss/mixins";
+
 .participants-container {
   width: 100%;
   display: flex;
   align-items: flex-start;
   gap: 15px;
+
+  @include sm {
+    flex-wrap: wrap;
+  }
 }
 
 

@@ -1,3 +1,9 @@
+@import "src/scss/mixins";
+
 .group-planning {
   padding-top: 41px;
+
+  @include sm {
+    padding-top: 20px;
+  }
 }
