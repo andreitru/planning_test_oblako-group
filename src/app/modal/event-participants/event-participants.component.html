@@ -1,0 +1,15 @@
+<div class="event-participants">
+  <h3 class="h3 event-participants__title">Участники мероприятия</h3>
+  <form class="event-participants__checkboxes">
+    <label class="checkbox checkbox__first">
+      Все пользователи
+      <input type="checkbox" name="checkbox" class="checkbox__input">
+      <span class="checkbox__checkmark"></span>
+    </label>
+    <label class="checkbox" *ngFor="let user of users">
+      {{user.name}}
+      <input type="checkbox" name="checkbox" class="checkbox__input">
+      <span class="checkbox__checkmark"></span>
+    </label>
+  </form>
+</div>

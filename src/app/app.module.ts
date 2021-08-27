@@ -9,21 +9,23 @@ import {BreadCrumbsComponent} from './bread-crumbs/bread-crumbs.component';
 import {TabsComponent} from "./tabs/tabs.component";
 import {TabComponent} from "./tabs/tab/tab.component";
 import {GroupPlanningComponent} from './group-planning/group-planning.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {FormComponent} from './group-planning/form/form.component';
 import {NgSelectModule} from "@ng-select/ng-select";
-import { CounterComponent } from './counter/counter.component';
-import { CustomizeFilterComponent } from './customize-filter/customize-filter.component';
-import { ResetComponent } from './reset/reset.component';
-import { SessionsListComponent } from './sessions-list/sessions-list.component';
-import { ModalComponent } from './modal/modal.component';
-import { ProgramComponent } from './modal/program/program.component';
-import { EventComponent } from './modal/event/event.component';
-import { EventNameComponent } from './modal/event/event-name/event-name.component';
+import {CounterComponent} from './counter/counter.component';
+import {CustomizeFilterComponent} from './customize-filter/customize-filter.component';
+import {ResetComponent} from './reset/reset.component';
+import {SessionsListComponent} from './sessions-list/sessions-list.component';
+import {ModalComponent} from './modal/modal.component';
+import {ProgramComponent} from './modal/program/program.component';
+import {EventComponent} from './modal/event/event.component';
+import {EventNameComponent} from './modal/event/event-name/event-name.component';
 import {DpDatePickerModule} from "ng2-date-picker";
-import { EventFormComponent } from './modal/event/event-form/event-form.component';
-import { ConditionsComponent } from './modal/conditions/conditions.component';
-import { CheckboxComponent } from './modal/conditions/checkbox/checkbox.component';
+import {EventFormComponent} from './modal/event/event-form/event-form.component';
+import {ConditionsComponent} from './modal/conditions/conditions.component';
+import {ParticipantsContainerComponent} from './modal/participants-container/participants-container.component';
+import {AvailableMembersComponent} from './modal/available-members/available-members.component';
+import { EventParticipantsComponent } from './modal/event-participants/event-participants.component';
 
 
 @NgModule({
@@ -47,13 +49,16 @@ import { CheckboxComponent } from './modal/conditions/checkbox/checkbox.componen
     EventNameComponent,
     EventFormComponent,
     ConditionsComponent,
-    CheckboxComponent,
+    ParticipantsContainerComponent,
+    AvailableMembersComponent,
+    EventParticipantsComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     NgSelectModule,
-    DpDatePickerModule
+    DpDatePickerModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

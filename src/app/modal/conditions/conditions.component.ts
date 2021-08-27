@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-conditions',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./conditions.component.scss']
 })
 export class ConditionsComponent implements OnInit {
+  conditions = [
+    'Не использовать код доступа',
+    'Требовать регистрацию',
+    'Запросить только имя и фамилию',
+    'Не требовать регистрацию, имя и фамилию'
+  ]
 
-  constructor() { }
+  form = new FormGroup({
+    conditions: new FormControl('')
+  })
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
-
 }
