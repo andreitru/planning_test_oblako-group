@@ -4,17 +4,17 @@
     <app-customize-filter class="group-form__customize-filter--mobile"></app-customize-filter>
   </label>
   <label class="group-form__label label">Программа
-    <ng-select [(ngModel)]="selectedProgram" [ngModelOptions]="{standalone: true}" class="group-form__select">
+    <ng-select (focus)="focus($event)" (blur)="blur($event)" [(ngModel)]="selectedProgram" [ngModelOptions]="{standalone: true}" class="group-form__select">
       <ng-option *ngFor="let item of programOptions" [value]="item.id">{{item.name}}</ng-option>
     </ng-select>
   </label>
   <label class="group-form__label label">Период
-    <ng-select [(ngModel)]="selectedPeriod" [ngModelOptions]="{standalone: true}" class="group-form__select">
+    <ng-select (focus)="focus($event)" (blur)="blur($event)" [(ngModel)]="selectedPeriod" [ngModelOptions]="{standalone: true}" class="group-form__select">
       <ng-option *ngFor="let item of periodOptions" [value]="item.id">{{item.name}}</ng-option>
     </ng-select>
   </label>
   <label class="group-form__label label">Статус
-    <ng-select [(ngModel)]="selectedStatus" [ngModelOptions]="{standalone: true}" class="group-form__select">
+    <ng-select (focus)="focus($event)" (blur)="blur($event)" [(ngModel)]="selectedStatus" [ngModelOptions]="{standalone: true}" class="group-form__select">
       <ng-option *ngFor="let item of statusOptions" [value]="item.id">{{item.name}}</ng-option>
     </ng-select>
   </label>
@@ -24,7 +24,7 @@
     <app-reset class="group-form__reset"></app-reset>
   </div>
   <label class="group-form__label group-form__label-sort label">Сортировка
-    <ng-select [(ngModel)]="selectedSort" [ngModelOptions]="{standalone: true}" class="group-form__select">
+    <ng-select (focus)="focus($event)" (blur)="blur($event)" [(ngModel)]="selectedSort" [ngModelOptions]="{standalone: true}" class="group-form__select">
       <ng-option *ngFor="let item of sortOptions" [value]="item.id">{{item.name}}</ng-option>
     </ng-select>
   </label>

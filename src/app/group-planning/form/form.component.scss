@@ -1,36 +1,38 @@
-@import "src/scss/mixins";
+@import "../../../scss/breakpoints";
 
 .group-form {
-  padding-bottom: 35px;
+  padding-bottom: 20px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 30px;
-
-  &__label-input {
-    max-width: 166px;
-    width: 100%;
-    padding-left: 24px;
-    border-bottom: 1px solid var(--primary-lines-gray);
-    background: url("../../../assets/icons/search.svg") no-repeat left center;
-
-    @include sm {
-      max-width: 100%;
-      display: flex;
-    }
-  }
+  column-gap: 30px;
 
   &__input {
-    padding: 7px 10px 6px 11px;
+    max-width: 166px;
     width: 100%;
-    outline: none;
-    border: none;
+    padding: 7px 10px 6px 34px;
+    border-bottom: 1px solid var(--primary-lines-gray);
+    background: url("../../../assets/icons/search.svg") no-repeat left center;
+    transition: border-bottom-color 0.3s;
 
     &::placeholder {
       font-weight: 500;
       font-size: 12px;
       color: var(--light-theme);
+    }
+
+    &:hover {
+      border-color: var(--light-theme);
+    }
+
+    &:focus {
+      border-color: var(--primary-blue);
+    }
+
+    @include sm {
+      max-width: 100%;
+      display: flex;
     }
   }
 
@@ -52,7 +54,7 @@
   }
 
   &__bottom {
-    padding-top: 5px;
+    padding-top: 18px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -64,11 +66,11 @@
   }
 
   &__sessions-count {
-    margin-right: 88px;
+    margin-right: 74px;
   }
 
   &__customize-filter {
-    margin-right: 30px;
+    margin-right: 2px;
 
     &--mobile {
       display: none;

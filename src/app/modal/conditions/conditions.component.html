@@ -3,7 +3,7 @@
   <form [formGroup]="form" class="conditions__radio radio">
     <label class="radio__label" *ngFor="let item of conditions">
       {{item}}
-      <input type="radio" class="radio__input" formControlName="conditions" value="{{item}}" >
+      <input type="radio" class="radio__input" name="conditions" formControlName="conditions" value="{{item}}" >
       <span class="radio__checkmark"></span>
     </label>
   </form>

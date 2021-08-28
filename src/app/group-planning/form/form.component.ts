@@ -36,6 +36,14 @@ export class FormComponent implements OnInit {
     search: new FormControl(''),
   })
 
+  focus(e: any) {
+    e.target.labels[0].classList.add('label--focused')
+  }
+
+  blur(e: any) {
+    e.target.labels[0].classList.remove('label--focused')
+  }
+
   constructor() {
   }
 

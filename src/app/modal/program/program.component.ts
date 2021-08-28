@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-program',
@@ -12,7 +12,17 @@ export class ProgramComponent implements OnInit {
     {id: 3, name: 'Забота о клиенте без страхования'}
   ]
   selectedProgram = 1
-  constructor() { }
+
+  focus(e: any) {
+    e.target.labels[0].classList.add('label--focused')
+  }
+
+  blur(e: any) {
+    e.target.labels[0].classList.remove('label--focused')
+  }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

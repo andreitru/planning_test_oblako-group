@@ -1,4 +1,4 @@
-@import "src/scss/mixins";
+@import "../../scss/breakpoints";
 
 .modal {
   z-index: 1000;
@@ -7,7 +7,9 @@
   bottom: 0;
   border-left: 1px solid var(--primary-lines-gray);
   left: 33%;
+  width: calc(67% - ((100vw - 1280px) / 2));
   right: calc((100vw - 1280px) / 2);
+  animation: slidein 0.5s;
 
   &__container {
     position: relative;
@@ -54,9 +56,30 @@
 
   @include mobile-md {
     left: 8%;
+    width: 92%;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    left: 100%;
   }
 
-  //@include mobile {
-  //  left: 0;
-  //}
+  100% {
+    left: 33%;
+    width: calc(67% - ((100vw - 1280px) / 2));
+  }
+}
+
+@include mobile-md {
+  @keyframes slidein {
+    0% {
+      left: 100%;
+    }
+
+    100% {
+      left: 8%;
+      width: 92%;
+    }
+  }
 }

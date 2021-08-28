@@ -1,4 +1,4 @@
-@import "src/scss/mixins";
+@import "../../scss/breakpoints";
 
 .sessions-list {
   margin: 0 0 0 -8px;
@@ -17,6 +17,7 @@
   font-size: 12px;
   line-height: 16px;
   color: var(--primary-black);
+  transition: background-color 0.3s;
 
   &:not(:nth-child(-n + 5)) {
     color: var(--light-theme);
@@ -94,6 +95,7 @@
     height: 32px;
     background-color: rgba(0, 0, 0, 0.16);
     border-radius: 50%;
+    transition: opacity 0.3s;
   }
 
   &__head {
@@ -109,8 +111,4 @@
       color: var(--light-theme-secondary);
     }
   }
-
-  //@include sm {
-  //  height: auto;
-  //}
 }

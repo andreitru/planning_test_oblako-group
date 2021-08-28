@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-event-form',
@@ -25,7 +25,20 @@ export class EventFormComponent implements OnInit {
   isTimeSelected = false
   isTrainerSelected = false
 
-  constructor() { }
+  focusIn(e: any) {
+    if (e) {
+      e.target.labels[0].classList.add('event-form__label--focused')
+    }
+  }
+
+  focusOut(e: any) {
+    if (e) {
+      e.target.labels[0].classList.remove('event-form__label--focused')
+    }
+  }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

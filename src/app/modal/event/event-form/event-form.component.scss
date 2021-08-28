@@ -1,4 +1,4 @@
-@import "src/scss/mixins";
+@import "../../../../scss/breakpoints";
 
 .event-form {
   padding-left: 51px;
@@ -10,11 +10,15 @@
 
   &__label {
     padding-left: 30px;
-    //max-width: 246px;
     width: 32%;
     border-bottom: 1px solid var(--primary-lines-gray);
     background-position: left 17px;
     background-repeat: no-repeat;
+    transition: border-bottom-color 0.3s;
+
+    &:hover:not(.event-form__label--focused) {
+      border-bottom-color: var(--light-theme);
+    }
 
     &--date {
       background-image: url("../../../../assets/icons/calendar.svg");
@@ -37,6 +41,15 @@
 
       &--selected {
         background-image: none;
+      }
+    }
+
+    &--focused {
+      border-bottom-color: var(--primary-blue);
+      transition: border-bottom-color 0.3s;
+
+      .event-form__text {
+        color: var(--primary-blue);
       }
     }
 
@@ -106,4 +119,8 @@
   justify-content: space-between !important;
   left: 10px !important;
   right: 10px !important;
+}
+
+::ng-deep .event-form__label--trainer ng-select  {
+  border-bottom: none !important;
 }

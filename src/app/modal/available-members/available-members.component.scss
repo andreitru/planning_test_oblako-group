@@ -1,4 +1,5 @@
-@import "src/scss/mixins";
+@import "../../../scss/breakpoints";
+@import "src/scss/checkbox";
 
 .available-members {
   padding-top: 20px;
@@ -24,26 +25,38 @@
   }
 
   &__input {
-    padding: 7px 10px 6px 11px;
     width: 100%;
     outline: none;
     border: none;
+    padding: 7px 10px 6px 34px;
+    border-bottom: 1px solid var(--primary-lines-gray);
+    background: url("../../../assets/icons/search.svg") no-repeat left center;
+    transition: border-bottom-color 0.3s;
 
     &::placeholder {
       font-weight: 500;
       font-size: 12px;
       color: var(--light-theme);
     }
+
+    &:hover {
+      border-color: var(--light-theme);
+    }
+
+    &:focus {
+      border-color: var(--primary-blue);
+    }
   }
 
   &__bottom {
     display: flex;
     align-items: center;
+    margin-top: -14px;
   }
 
   &__count {
     white-space: nowrap;
-    margin-right: 46px;
+    margin-right: 33px;
 
     @include mobile {
       margin-right: 5%;
@@ -51,10 +64,8 @@
   }
 
   &__customize-filter {
-    margin-right: 29px;
-
     span {
-      @include sm {
+      @include mobile {
         display: none;
       }
     }
@@ -65,75 +76,12 @@
   }
 
   &__checkboxes {
-    margin-top: 53px;
+    margin-top: 25px;
   }
 }
 
 .checkboxes {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-}
-
-.checkbox {
-  display: flex;
-  align-items: flex-start;
-  height: 20px;
-  position: relative;
-  padding-left: 60px;
-  cursor: pointer;
-  font-weight: 500;
-  color: var(--primary-black);
-  font-size: 12px;
-  user-select: none;
-
-  &__first {
-    padding-left: 24px;
-  }
-
-  &__input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-
-  &__checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 16px;
-    width: 16px;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 2px;
-
-    &:after {
-      content: "";
-      position: absolute;
-      display: none;
-    }
-  }
-}
-
-.checkbox:hover .checkbox__input ~ .checkbox__checkmark {
-  background-color: rgba(0, 0, 0, 0.04);
-}
-
-.checkbox .checkbox__input:checked ~ .checkbox__checkmark {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.checkbox .checkbox__input:checked ~ .checkbox__checkmark:after {
-  display: block;
-}
-
-.checkbox .checkbox__checkmark:after {
-  left: 50%;
-  top: 50%;
-  width: 5px;
-  height: 10px;
-  border: solid var(--primary-blue);
-  border-width: 0 2px 2px 0;
-  transform: translate(-50%, -50%) rotate(45deg);
+  margin-left: -8px;
 }

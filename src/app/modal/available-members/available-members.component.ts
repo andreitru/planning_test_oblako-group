@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {Component, OnInit} from '@angular/core';
 import {USERS} from "../../users";
 
 @Component({
@@ -16,6 +15,14 @@ export class AvailableMembersComponent implements OnInit {
   selectedExperience = 1
 
   users = USERS
+
+  focus(e: any) {
+    e.target.labels[0].classList.add('label--focused')
+  }
+
+  blur(e: any) {
+    e.target.labels[0].classList.remove('label--focused')
+  }
 
   constructor() { }
 
