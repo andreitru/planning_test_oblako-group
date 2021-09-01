@@ -65,6 +65,7 @@
 
   &__customize-filter {
     span {
+      pointer-events: none;
       @include mobile {
         display: none;
       }

@@ -14,6 +14,11 @@
   &:hover {
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.04);
+
+    .checkbox__btn {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   &__first {
@@ -43,6 +48,16 @@
       position: absolute;
       display: none;
     }
+  }
+
+  &__btn {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.3s;
   }
 }
 

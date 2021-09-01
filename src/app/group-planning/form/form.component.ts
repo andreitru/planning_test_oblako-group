@@ -36,6 +36,37 @@ export class FormComponent implements OnInit {
     search: new FormControl(''),
   })
 
+  options = [
+    {
+      group: 'system',
+      title: 'Поиск'
+    },
+    {
+      group: 'system',
+      title: 'Программа'
+    },
+    {
+      group: 'system',
+      title: 'Период'
+    },
+    {
+      group: 'system',
+      title: 'Статус'
+    },
+    {
+      group: 'additional',
+      title: 'Подразделение'
+    },
+    {
+      group: 'additional',
+      title: 'Округ'
+    },
+    {
+      group: 'additional',
+      title: 'Город'
+    }
+  ];
+
   focus(e: any) {
     e.target.labels[0].classList.add('label--focused')
   }

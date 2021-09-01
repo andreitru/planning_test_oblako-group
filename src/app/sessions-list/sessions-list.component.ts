@@ -9,6 +9,21 @@ import {SESSIONS} from "../sessions";
 export class SessionsListComponent implements OnInit {
   sessions = SESSIONS;
 
+  menuVisible = false;
+
+  showMenu(el: any) {
+    el.stopPropagation()
+    if (el.target.nextElementSibling.style.display == 'none') {
+      el.target.nextElementSibling.style.display = 'block';
+    } else {
+      el.target.nextElementSibling.style.display = 'none'
+    }
+  }
+
+  hideMenu(el: any) {
+    el.target.parentElement.style.display = 'none';
+  }
+
   constructor() {
   }
 

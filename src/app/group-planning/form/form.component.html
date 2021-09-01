@@ -1,7 +1,7 @@
 <form class="group-form">
   <label for="search" class="group-form__label-input">
     <input id="search" type="search" placeholder="Поиск" class="group-form__input">
-    <app-customize-filter class="group-form__customize-filter--mobile"></app-customize-filter>
+    <app-customize-filter class="group-form__customize-filter--mobile" [options]="options"></app-customize-filter>
   </label>
   <label class="group-form__label label">Программа
     <ng-select (focus)="focus($event)" (blur)="blur($event)" [(ngModel)]="selectedProgram" [ngModelOptions]="{standalone: true}" class="group-form__select">
@@ -20,7 +20,7 @@
   </label>
   <div class="group-form__bottom">
     <app-counter class="group-form__sessions-count">34 сессии</app-counter>
-    <app-customize-filter class="group-form__customize-filter">Настроить фильтр</app-customize-filter>
+    <app-customize-filter class="group-form__customize-filter" [options]="options">Настроить фильтр</app-customize-filter>
     <app-reset class="group-form__reset"></app-reset>
   </div>
   <label class="group-form__label group-form__label-sort label">Сортировка

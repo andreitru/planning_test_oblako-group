@@ -25,7 +25,7 @@ import {EventFormComponent} from './modal/event/event-form/event-form.component'
 import {ConditionsComponent} from './modal/conditions/conditions.component';
 import {ParticipantsContainerComponent} from './modal/participants-container/participants-container.component';
 import {AvailableMembersComponent} from './modal/available-members/available-members.component';
-import { EventParticipantsComponent } from './modal/event-participants/event-participants.component';
+import {EventParticipantsComponent} from './modal/event-participants/event-participants.component';
 
 
 @NgModule({

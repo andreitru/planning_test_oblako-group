@@ -24,6 +24,37 @@ export class AvailableMembersComponent implements OnInit {
     e.target.labels[0].classList.remove('label--focused')
   }
 
+  options = [
+    {
+      group: 'system',
+      title: 'Поиск'
+    },
+    {
+      group: 'system',
+      title: 'Группа'
+    },
+    {
+      group: 'system',
+      title: 'Должность'
+    },
+    {
+      group: 'system',
+      title: 'Стаж'
+    },
+    {
+      group: 'additional',
+      title: 'Подразделение'
+    },
+    {
+      group: 'additional',
+      title: 'Округ'
+    },
+    {
+      group: 'additional',
+      title: 'Город'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
